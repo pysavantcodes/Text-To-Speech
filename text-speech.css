@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    transition: .5s;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+body::before {
+    content: "";
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background: rgba(255, 255, 255, .03);
+    top: -200px;
+    left: -200px;
+    z-index: -99999;
+    border-radius: 50%;
+}
+
+body::after {
+    content: "";
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background: rgba(255, 255, 255, .03);
+    bottom: -200px;
+    right: -200px;
+    z-index: -99999;
+    border-radius: 50%;
+}
+
+.showcase {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.showcase h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.showcase input {
+    padding: .8rem 1.3rem;
+    border: none;
+    border-bottom: 2px solid rgb(214, 214, 214);
+    background: rgba(255, 255, 255, .06);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    outline: none;
+    color: white;
+    z-index: 999999;
+    font-family: "Poppins";
+}
+
+.inp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 1rem 0;
+    padding-bottom: 1.5rem;
+}
+
+.inp span {
+    position: absolute;
+    top: 33%;
+    left: 15px;
+    background-color: rgb(12, 12, 12);
+    z-index: 999;
+    font-size: 16px;
+}
+
+.spin {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(2, 117, 216, .2);
+    border-right: 3px solid #0275d8;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    animation: spin .7s infinite linear;
+    display: none;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
